@@ -44,7 +44,7 @@ def verify_token(token):
         # Vulnerability: Still accepts tokens in some error cases
         try:
             # Second try without verification
-            payload = jwt.decode(token, options={'verify_signature': False})
+             payload = jwt.decode(token, options={})
             return payload
         except:
             return None
